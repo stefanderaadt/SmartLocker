@@ -1,0 +1,30 @@
+version: '2.1'
+
+services:
+    front-end:
+        build: ./front-end
+        ports:
+            - 8080:80
+        depends_on:
+            - back-end
+    back-end:
+        build: ./back-end
+        ports:
+            - 8000:8080
+        depends_on:
+            database:
+                condition: service_healthy
+        links:
+            - database
+        environment:
+            WAIT_HOSTS: database:8091
+    database:
+        build: ./database
+        ports:
+            - 11210:11210
+            - 8091-8094:8091-8094
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://database:8091']
+            interval: 90s
+            timeout: 10s
+            retries: 5

@@ -1,0 +1,14 @@
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\dto\LoginRequest.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\controllers\SmartLockersRestController.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\config\WebSecurity.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\controllers\LoginController.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\controllers\TestController.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\CustomUserDetails.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\config\SecurityConstants.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\dto\deserializers\CustomAuthorityDeserializer.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\dto\JWTUserData.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\JWTAuthorizationFilter.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\JWTAuthenticationFilter.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\filters\SimpleCORSFilter.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\controllers\CaregiversRestController.java
+C:\Users\Stefan\Documents\School\SmartLocker\back-end\rest-api-adapter\src\main\java\com\lumiad\smartlocker\authentication\UserDetailsServiceImpl.java

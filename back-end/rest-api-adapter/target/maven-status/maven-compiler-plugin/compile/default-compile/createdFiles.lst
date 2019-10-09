@@ -1,0 +1,14 @@
+com\lumiad\smartlocker\authentication\config\SecurityConstants.class
+com\lumiad\smartlocker\controllers\SmartLockersRestController.class
+com\lumiad\smartlocker\authentication\JWTAuthenticationFilter.class
+com\lumiad\smartlocker\authentication\UserDetailsServiceImpl.class
+com\lumiad\smartlocker\controllers\CaregiversRestController.class
+com\lumiad\smartlocker\authentication\config\WebSecurity.class
+com\lumiad\smartlocker\authentication\CustomUserDetails.class
+com\lumiad\smartlocker\authentication\dto\JWTUserData.class
+com\lumiad\smartlocker\authentication\filters\SimpleCORSFilter.class
+com\lumiad\smartlocker\authentication\dto\deserializers\CustomAuthorityDeserializer.class
+com\lumiad\smartlocker\authentication\JWTAuthorizationFilter.class
+com\lumiad\smartlocker\controllers\LoginController.class
+com\lumiad\smartlocker\authentication\dto\LoginRequest.class
+com\lumiad\smartlocker\controllers\TestController.class

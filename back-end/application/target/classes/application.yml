@@ -1,0 +1,17 @@
+# database
+spring:
+  couchbase:
+    bucket:
+      name: bucket1
+      password: password
+    bootstrap-hosts: docker.4on.nl
+  data:
+    couchbase:
+      auto-index: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.data.couchbase.repository.query: DEBUG
