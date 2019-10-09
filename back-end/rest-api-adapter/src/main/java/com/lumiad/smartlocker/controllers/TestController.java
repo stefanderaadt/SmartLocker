@@ -1,10 +1,10 @@
 package com.lumiad.smartlocker.controllers;
 
 import com.lumiad.smartlocker.models.*;
-import com.lumiad.smartlocker.serviceadapters.exceptions.NotFoundException;
-
-import com.lumiad.smartlocker.serviceports.*;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.lumiad.smartlocker.serviceports.GroupServicePort;
+import com.lumiad.smartlocker.serviceports.ScheduleServicePort;
+import com.lumiad.smartlocker.serviceports.SmartLockerServicePort;
+import com.lumiad.smartlocker.serviceports.UserServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -29,9 +28,9 @@ public class TestController {
 
   @Autowired BCryptPasswordEncoder bCryptPasswordEncoder;
 
-  @GetMapping("/test")
+  @GetMapping("/init")
   @ResponseBody
-  public void test() throws NotFoundException {
+  public String test() {
     List<SimpleGrantedAuthority> grantedAuthorities = new ArrayList<>();
     grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
     Group group = new Group("ADMIN", true, grantedAuthorities);
@@ -78,28 +77,6 @@ public class TestController {
     schedule.setSmartLockerId(smartLockerId);
     scheduleService.addSchedule(schedule);
 
-    System.out.println(scheduleService.canUserEnter(caregiver.getAccessToken(), smartLockerId));
+    return "Successfully initialized!";
   }
-
-  @GetMapping("/test2")
-  @ResponseBody
-  public Group test2() throws NotFoundException, IOException {
-
-    SmartLog smartLog = new SmartLog();
-    smartLog.setSmartLockerId("SMARTLOCKER::1319f016-e4ef-449e-b59e-ac650656ccff");
-    smartLog.setOpen(true);
-
-    ObjectMapper objectMapper = new ObjectMapper();
-
-    String logAsString = objectMapper.writeValueAsString(smartLog);
-    System.out.println(logAsString);
-    smartLockerService.addSmartLog(smartLog);
-
-    System.out.println(smartLockerService.getLatestSmartLogBySmartLockerId("SMARTLOCKER::1319f016-e4ef-449e-b59e-ac650656ccff").getCreatedAt());
-
-
-    return groupService.getGroup("GROUP::ADMIN");
-  }
-
-
 }
