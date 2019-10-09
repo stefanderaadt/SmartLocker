@@ -5,7 +5,7 @@
 Requirements: `Docker` and `Docker Compose`
 
 -   Clone repository
--   Go to folder `cd SmartLocker`
+-   Go to the right folder `cd SmartLocker`
 -   Build the project `docker-compose build` (Make sure docker is running)
 -   Run the project `docker-compose up`
 -   Initialize the database, go to: `http://localhost:8000/init`
